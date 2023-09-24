@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<info>
+	<id>email_template_example</id>
+	<name>Example E-Mail Template</name>
+	<description>Example E-Mail Template for Nextcloud</description>
+	<licence>AGPL</licence>
+	<author>Marius Blüm</author>
+	<version>0.0.1</version>
+	<namespace>EmailTemplateExample</namespace>
+
+	<category>customization</category>
+
+	<dependencies>
+		<nextcloud min-version="17" max-version="19" />
+	</dependencies>
+
+	<types>
+		<logging/>
+	</types>
+
+	<repair-steps>
+		<install>
+			<step>OCA\EmailTemplateExample\Migration\SetEmailTemplate</step>
+		</install>
+		<uninstall>
+			<step>OCA\EmailTemplateExample\Migration\UnsetEmailTemplate</step>
+		</uninstall>
+	</repair-steps>
+</info>
